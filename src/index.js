@@ -22,7 +22,7 @@ app.listen(port, () => {
 
 mongoose
   .connect(
-    "mongodb+srv://admin:admin@rajcluster.twcoi6w.mongodb.net/Node-Api?retryWrites=true&w=majority&appName=rajCluster"
+    `mongodb+srv://admin:${process.env.DB_PASSWORD}@rajcluster.twcoi6w.mongodb.net/Node-Api?retryWrites=true&w=majority&appName=rajCluster`
   )
   .then(() => {
     console.log("MongoDB connected successfully");
